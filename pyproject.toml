@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "thispkg"
-version = "0.0.1"
+version = "0.0.2"
 description = ""
 authors = ["obahamonde <oscar.bahamonde@indiecloud.co>"]
 readme = "README.md"
@@ -33,5 +33,9 @@ pytest = "^8.3.2"
 pytest-asyncio = "^0.23.8"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0", "setuptools", "wheel", "Cython"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.build]
+script = "build_ext.py"
+generate-setup-file = false

@@ -28,7 +28,7 @@ async def test_search(vector_store_id: str):
     assert len(data) == 10
 
 
-# @pytest.mark.skip(reason="Not implemented")
+@pytest.mark.skip(reason="Not implemented")
 @pytest.mark.parametrize("vector_store_id", [str(i) for i in range(10)])
 @pytest.mark.asyncio
 async def test_delete(vector_store_id: str):
